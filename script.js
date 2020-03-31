@@ -1,23 +1,23 @@
-var name = window.prompt("Hello friend! What\'s your name?")
+var playerName = window.prompt("Hello friend! What\'s your name?")
 var flag = true
 
-if (name === null || name === undefined) {
-  name = 'He Who Shall Not Be Named'
+if (playerName === null || playerName === undefined) {
+  playerName = 'He Who Shall Not Be Named'
   flag = false
 }
 
 while (flag) {
-  if (name) {
-    name = name.trim()
-    window.alert('Hello there ' + name + '! We are going for a walk in the woods whether you like it or not.')
+  if (playerName) {
+    playerName = playerName.trim()
+    window.alert('Hello there ' + playerName + '! We are going for a walk in the woods whether you like it or not.')
     flag = false
   }
-  else if (!!name === false) {
-    name = window.prompt("But friend, you forgot to enter your name! What\'s your name?")
+  else {
+    playerName = window.prompt("But friend, you forgot to enter your name! What\'s your name?")
   }
 }
 
-var ready2go = window.confirm('Are you ready for the adventure, ' + name + '?')
+var ready2go = window.confirm('Are you ready for the adventure, ' + playerName + '?')
 if (ready2go) {
   window.alert('Awesome! I would have forced you to go even if you weren\'t')
 }
@@ -36,7 +36,7 @@ if (place === 'MOUNTAINS' && flag !== true) {
   window.alert('Awesome that\'s always been my favorite. Great views. Very friendly mountain trolls. Let\'s go!')
 }
 else if (place === 'CITY') {
-  window.alert('Really? You like it there? Wow you certainly were looking for the safe adventure, ' + name + '. Let\s go!')
+  window.alert('Really? You like it there? Wow you certainly were looking for the safe adventure, ' + playerName + '. Let\s go!')
 }
 else if (place === 'FOREST') {
   window.alert('Excellent! I let the fairies borrow my hairbrush the last time I was there, and they seriously won\'t give things back unless you bug them incessantly, it\'s ridiculous. Let\'s go!')
@@ -54,10 +54,10 @@ else {
   animal = 'dog'
 }
 
-window.alert('Oh my goodness- STOP, ' + name.toUpperCase() + '!! Is that what I think it is? How lucky! We found a ' + animal + '!')
+window.alert('Oh my goodness- STOP, ' + playerName.toUpperCase() + '!! Is that what I think it is? How lucky! We found a ' + animal + '!')
 
-var numTreats = window.prompt('Clearly, we need it to be our friend. Lucky for you I have some ' + animal + ' treats right here in my pocket for just such occasion. How many treats should I give it, ' + name + '?')
+var numTreats = window.prompt('Clearly, we need it to be our friend. Lucky for you I have some ' + animal + ' treats right here in my pocket for just such occasion. How many treats should I give it, ' + playerName + '?')
 
 numTreats = numTreats || 5
 
-window.alert(name + ' gives the ' + animal + ' ' + numTreats + ' ' + animal + ' treats. It seems satisfied. You did it! You survived the adventure!')
+window.alert(playerName + ' gives the ' + animal + ' ' + numTreats + ' ' + animal + ' treats. It seems satisfied. You did it! You survived the adventure!')
